@@ -9,7 +9,7 @@ export default function AllPostsPage({posts}){
         <title>All my posts</title>
         <meta 
           name = "description"
-          content = "A list of all programming-related tutorials and posts!"/>
+          content = "A list of all programming-related tutorials and posts!!"/>
       </Head>
       <AllPosts posts = {posts}/>
     </>
