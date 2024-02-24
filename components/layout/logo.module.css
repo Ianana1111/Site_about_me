@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&family=Zen+Maru+Gothic&display=swap');
+
 .logo {
+  fond-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  font-size: var(--size-5);
+  font-size: var(--size-1);
   font-weight: bold;
-  font-family: 'Oswald', sans-serif;
   color: var(--color-grey-50);
 }
 

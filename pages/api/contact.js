@@ -28,7 +28,7 @@ export default async function handler(req, res) {
     let client;
     try {
       client = await MongoClient.connect(
-        'mongodb+srv://dbuser:Asdf85697437@cluster0.pqafyqt.mongodb.net/my-site?retryWrites=true&w=majority'
+        'mongodb+srv://dbuser:Asdf85697437@cluster0.pqafyqt.mongodb.net/my-site/bulletin?retryWrites=true&w=majority'
       );
     } catch (error){
       res.status(500).json({message: 'Could not connect to database'});
@@ -48,5 +48,6 @@ export default async function handler(req, res) {
     client.close();
 
     res.status(201).json({message: 'Successful', message: newMessage})
+
   }
 }

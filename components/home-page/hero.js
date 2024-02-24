@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import classes from './hero.module.css'
+
 export default function Hero(){
   return(
     <section className={classes.hero}>
@@ -11,9 +12,9 @@ export default function Hero(){
           height = {300}
         />
       </div>
-      <h1>Hi, I am Ian</h1>
+      <h1>Hi all, Ian is here</h1>
       <p>
-        I blog about web development - especially fronted frameworks like Angular or React.
+        Welcome to my site. Hope you enjoy it.
       </p>
     </section>
   )

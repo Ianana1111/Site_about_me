@@ -2,7 +2,7 @@ import classes from './contact-form.module.css';
 import { useState, useEffect } from 'react';
 import Notification from '../ui/notification';
 
-async function sendContactData(contactDetails){
+async function sendContactData(contactDetails){ 
 
   const response = await fetch('/api/contact',{
     method: 'POST',
@@ -38,6 +38,7 @@ export default function ContactForm(){
 
   async function sendMessageHandler(event){
     event.preventDefault();
+    
     // add client-side validation 
 
     const mes = {

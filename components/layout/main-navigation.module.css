@@ -1,34 +1,83 @@
-.header {
-  width: 100%;
-  height: 6rem;
-  background-color: var(--color-grey-900);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&family=Zen+Maru+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.header ul {
-  list-style: none;
-  display: flex;
-  align-items: baseline;
-  margin: 0;
-  padding: 0;
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  //font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: var(--size-8);
+  font-weight: bold;
+  color: var(--color-grey-50);
 }
 
 .header li {
-  margin: 0 var(--size-4);
+  //font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+  margin: 0 var(--size-1);
 }
 
-.header a {
-  color: var(--color-grey-100);
-  font-size: var(--size-4);
+
+
+.header {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; 设置导航栏背景色
+  transition: height 1s ease; 添加高度变化的过渡效果 */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 10%;
+  position: sticky;
+  top:0;
+  z-index: 2;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-grey-900),
+    var(--color-grey-800)
+  );
+  height: 100px;
+  transition: height 1s ease;
 }
 
-.header a:hover,
-.header a:active,
-.header a.active {
+.scrolled {
+  height: 83px; /* 滚动后的导航栏高度 */
+}
+
+.nav_links {
+  life_style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  color: var(--color-grey-50);
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
   color: var(--color-grey-200);
+}
+
+.button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgba(110, 112, 122, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+  background-color: rgba(130, 132, 144, 0.8);
 }
 
 @media (min-width: 768px) {
