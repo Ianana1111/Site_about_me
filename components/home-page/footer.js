@@ -31,7 +31,7 @@ export default function Footer() {
           </a>
           <a href="https://www.instagram.com/hakaman_joymua/">
             <Image 
-              src = "/images/icons/insta_log.png" 
+              src = "/images/icons/stagram.png" 
               alt = "connect to ig official web" 
               width={37}
               height={37}
