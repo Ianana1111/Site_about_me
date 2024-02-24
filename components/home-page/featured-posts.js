@@ -1,12 +1,32 @@
+import { useState, useEffect, useRef } from 'react';
 import PostsGrid from '../posts/posts-grid';
 import classes from './featured-posts.module.css';
 
+
 export default function FeaturedPosts(props){
-  console.log(props.posts)
+  const [isVisible, setIsVisible] = useState(true);
+  const componentRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          
+          setIsVisible(true);
+          observer.unobserve(componentRef.current);
+        }
+      },
+      { threshold: 1 } 
+    );
+    observer.observe(componentRef.current);
+  }, []);
+
   return(
-    <section className={classes.latest}>
-      <h2>Featured Posts</h2>
-      <PostsGrid posts = {props.posts}/>
-    </section>
+    <div ref={componentRef} className={isVisible? classes.show:classes.hide}>
+      <section className={classes.latest}>
+        <div className={classes.text}>Recent Posts</div>
+        <div className={classes.grid}><PostsGrid posts = {props.posts}/></div>
+      </section>
+    </div>
+    
   )
 }

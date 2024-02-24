@@ -19,8 +19,6 @@
   margin: 0 var(--size-1);
 }
 
-
-
 .header {
   /* position: fixed;
   top: 0;
@@ -38,10 +36,11 @@
   background-image: linear-gradient(
     to bottom,
     var(--color-grey-900),
-    var(--color-grey-800)
+    var(--color-grey-835)
   );
   height: 100px;
   transition: height 1s ease;
+  opacity: 0.96;
 }
 
 .scrolled {

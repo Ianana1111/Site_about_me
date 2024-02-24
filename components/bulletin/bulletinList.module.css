@@ -17,12 +17,13 @@
 }
 .posts {
   list-style: none;
-  max-width: 50rem;
+  max-width: 90rem;
   margin: 1rem auto;
-  padding: 0rem 0;
+  padding: 0rem;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(5, 30%);
+  /* grid-template-columns: repeat(auto-fill, 30%); */
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 30fr));
   justify-content: center;
   
 }
@@ -46,6 +47,7 @@
   cursor: pointer;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
   transition: background-color 0.3s ease;
+  z-index: 2;
 }
 
 .FloatingButton:hover {

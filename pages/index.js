@@ -5,6 +5,7 @@ import FeaturedPosts from "@/components/home-page/featured-posts";
 import Hero from "@/components/home-page/hero";
 import Picture from "@/components/home-page/picture";
 import BriefAbout from "@/components/home-page/about-brief";
+import Footer from "@/components/home-page/footer";
 
 export default function HomePage({posts}){
   return (
@@ -17,15 +18,15 @@ export default function HomePage({posts}){
       </Head>
       <Hero/>
       <BriefAbout/>
-      {/* <Picture/> */}
       <FeaturedPosts posts = {posts}/>
+      {/* <Picture/> */}
+      <Footer/>
     </Fragment>
   )
 }
 
 export function getStaticProps(){
-  const featuredPosts = getFeaturedPosts();
-
+  const featuredPosts = getFeaturedPosts(); 
   return {
     props: {
       posts: featuredPosts,

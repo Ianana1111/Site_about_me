@@ -5,9 +5,10 @@
   background-image: linear-gradient(
     to bottom,
     var(--color-grey-800),
-    var(--color-grey-500)
+    var(--color-grey-450)
   );
   padding: var(--size-40) 0;
+  /* border-bottom: 1px white solid; */
 }
 
 .image {
@@ -31,7 +32,7 @@
 .hero h1 {
   font-family: "IBM Plex Mono", monospace;
   font-size: var(--size-8);
-  color: var(--color-grey-200); 
+  color: var(--color-grey-100); 
   animation: fade-slide-in-from-bottom 1.5s ease-out forwards;
   text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
@@ -39,7 +40,7 @@
 .hero p {
   font-family: "IBM Plex Mono", monospace;
   font-size: var(--size-6);
-  color: var(--color-grey-200);
+  color: var(--color-grey-100);
   //width: 90%;
   max-width: 50rem;
   margin: auto;
