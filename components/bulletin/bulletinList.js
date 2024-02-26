@@ -29,7 +29,7 @@ export default function BulletinList() {
         <h1>Bulletin Board</h1>
         <p>You can leave any comment you want here!</p>
       </header>
-      {isLoading && <p className={classes.loading}>Fetching Meals</p>}
+      {isLoading && <p className={classes.loading}>Loading...</p>}
       {!isLoading && data.message.length === 0 && (
         <div style={{ textAlign: 'center', color: 'white' }}>
           <h2>There are no posts yet.</h2>
