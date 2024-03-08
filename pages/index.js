@@ -5,7 +5,7 @@ import FeaturedPosts from "@/components/home-page/featured-posts";
 import Hero from "@/components/home-page/hero";
 import Picture from "@/components/home-page/picture";
 import BriefAbout from "@/components/home-page/about-brief";
-import Footer from "@/components/home-page/footer";
+import Footer from "@/components/layout/footer";
 
 export default function HomePage({posts}){
   return (

@@ -1,4 +1,5 @@
 import ContactForm from "@/components/contact/contact-form";
+import Footer from "@/components/layout/footer";
 import Head from 'next/head';
 export default function ContactPage(){
   return (
@@ -8,6 +9,7 @@ export default function ContactPage(){
         <meta name = 'description' content = 'Send me your message'/>
       </Head>
       <ContactForm/>
+      <Footer/>
     </>
   )
 }

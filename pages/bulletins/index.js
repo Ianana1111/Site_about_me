@@ -1,4 +1,5 @@
 import BulletinList from '@/components/bulletin/bulletinList';
+import Footer from '@/components/layout/footer';
 import Head from 'next/head';
 export default function Bulletin(){
   return (

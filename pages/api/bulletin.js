@@ -32,9 +32,9 @@ export default async function handler(req, res) {
     }
 
     const db = client.db();
-
+    let result;
     try {
-      const result = await db.collection('board').insertOne(newMes);
+      result = await db.collection('board').insertOne(newMes);
       newMes.id = result.insertedId;
     } catch (error){
       client.close();
@@ -43,7 +43,7 @@ export default async function handler(req, res) {
     }
     client.close();
 
-    
+    res.status(201).json({message: 'Successful', message: result})
 
   } else if(req.method === 'GET'){
     let client;

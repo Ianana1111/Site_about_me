@@ -1,6 +1,7 @@
 import classes from './contact-form.module.css';
 import { useState, useEffect } from 'react';
 import Notification from '../ui/notification';
+import Footer from '../layout/footer';
 
 async function sendContactData(contactDetails){ 
 
@@ -87,7 +88,7 @@ export default function ContactForm(){
 
   return (
     <section className={classes.contact}>
-      <h1>How can I help you?</h1>
+      <h1>這頁阿味好 不要亂打字 <br/>不然你只會收到error</h1>
       <form className={classes.form} onSubmit ={sendMessageHandler}>
         <div className={classes.controls}>
           <div className={classes.control}>
@@ -125,6 +126,7 @@ export default function ContactForm(){
           <button>Send Message</button>
         </div>
       </form>
+      
       {notification && (
         <Notification 
           status = {notification.status}

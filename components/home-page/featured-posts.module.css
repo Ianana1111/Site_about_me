@@ -32,6 +32,15 @@
 
 .grid {
   padding: 3rem 0rem;
+  background: linear-gradient(to right, 
+  var(--color-grey-450), 
+  #ffffff, 
+  var(--color-grey-450));
+  background: linear-gradient(to bottom, 
+  var(--color-grey-450), 
+  #ffffff, 
+  var(--color-grey-450));
+  background: radial-gradient(circle at center, var(--color-grey-450) #ffffff);
 }
 
 @media (min-width: 768px) {

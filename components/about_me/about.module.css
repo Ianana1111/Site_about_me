@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter&family=Noto+Sans+TC:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.left, .right {
+  font-family: "Inter", sans-serif;
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  /* border: 1px solid #ccc; */
+  position: relative;
+  padding: 0px;
+}
+
+.right {
+  padding-right: 150px;
+}
+
+.left {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;  
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 120px; /* 调整左侧区域的内边距 */
+  max-width: 500px; /* 调整左侧区域的最大宽度 */
+}
+
+.left::before,
+.right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px; /* 调整此处的宽度以设置边界 */
+  height: 100%;
+}
+
+.right::before {
+  left: auto;
+  right: 0;
+}
+
+.right h1{
+  padding-top: 50px;
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+}
+
+.right h2{
+  font-family: "Inter", sans-serif;
+  font-size: 34px;
+  box-shadow: 0 0.3px;
+  padding-bottom:30px;
+}
+
+.right p{
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 24px;  
+}
+
+.right_2 {
+  padding-bottom: 14px;
+}
+
+.left a{
+  color: var(--color-grey-900);
+  transition: all 0.3s ease 0s;
+}
+
+.left a:hover {
+  color: var(--color-grey-600);
+}
+
+.left p {
+  text-align: center; /* 让左侧文字居中 */
+  margin-bottom: 10px; /* 调整段落之间的间距 */
+}
+
+
+.ifras {
+  padding-top: 30px;
+  animation: fade-slide-in-from-bottom 1.5s ease-out forwards;
+}
+
+.ifra {
+  border-radius:12px;
+  padding: 10px;
+}
+
+
+@keyframes fade-slide-in-from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

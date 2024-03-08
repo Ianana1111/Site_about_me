@@ -1,37 +1,60 @@
 .post {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   background-color: var(--color-grey-800);
-  text-align: center;
+  text-align: center; */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0), 0 1px 12px 2px rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+  /* justify-content: flex-end; */
 }
 
+.post:hover {
+  transform: scale(1.03);
+}
 .post a {
   color: var(--color-grey-100);
 }
 
 .image {
-  width: 100%;
+  width: 50%;
   max-height: 20rem;
   overflow: hidden;
+  float: right;
 }
 
 .image img {
+  float: right;
   object-fit: cover;
+  align-self: flex-end;
 }
 
 .content {
+  text-align: left;
   padding: var(--size-4);
+  display: flex;
+  flex-direction: column;
 }
 
 .content h3 {
   margin: var(--size-2) 0;
-  font-size: var(--size-6);
+  color: black;
+  font-size: var(--size-16);
 }
 
 .content time {
   font-style: italic;
   color: var(--color-grey-300);
+  font-size: var(--size-6);
 }
 
 .content p {
   line-height: var(--size-6);
+  color: black;
+  font-size: var(--size-5);
 }
